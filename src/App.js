@@ -10,7 +10,7 @@ const App = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/CountriesAPI" element={<Main />} />
+      <Route path="/CountriesAPI/" element={<Main />} />
         <Route path="/CountriesAPI/country/:name" element={<Country />} />
       </Routes>
     </BrowserRouter>
