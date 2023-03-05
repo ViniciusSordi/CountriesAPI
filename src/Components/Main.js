@@ -57,7 +57,7 @@ const Main = () => {
         {data &&
           data.map((item, index) => (
             <Link
-              to={"/country/" + item.name.common.replace(/\s/g, "")}
+              to={"/CountriesAPI/country/" + item.name.common.replace(/\s/g, "")}
               key={index}
               className="link-flex"
             >

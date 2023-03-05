@@ -55,7 +55,7 @@ const Country = () => {
 
   return (
     <section className="container">
-      <Link to="/">
+      <Link to="/CountriesAPI">
         <div className="nav-container">
           <div className="button-container">
             <img src={arrow} alt="arrow icon" />
