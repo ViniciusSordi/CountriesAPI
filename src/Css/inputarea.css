@@ -1,0 +1,110 @@
+.search-filter-container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 40px;
+}
+
+.search-container {
+  align-self: flex-start;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  max-width: 440px;
+  position: relative;
+}
+
+.search-container > input {
+  box-shadow: 0px 0px 7px 2px var(--color5);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: var(--color1);
+  padding: 20px;
+  padding-left: 54px;
+  flex-grow: 1;
+  color: var(--color3);
+  border: 2px solid transparent;
+}
+
+.search-container > input:focus {
+  border: 2px solid var(--color3);
+}
+
+.search-container > img {
+  position: absolute;
+  margin-left: 20px;
+  max-width: 20px;
+}
+
+.selected {
+  min-width: 210px;
+  cursor: pointer;
+  padding: 16px 20px;
+  background-color: var(--color1);
+  color: var(--color3);
+  box-shadow: 0px 0px 7px 2px var(--color5);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  margin-top: 3px;
+  margin-bottom: 8px;
+}
+
+.icon-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+.icon-container > img {
+  max-width: 20px;
+}
+
+ul {
+  position: absolute;
+  min-width: 210px;
+  box-shadow: 0px 0px 7px 2px var(--color5);
+  border-radius: 5px;
+  background-color: var(--color1);
+  color: var(--color3);
+  padding: 10px 0px;
+}
+
+ul > li {
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+ul > li:hover {
+  background-color: var(--color5);
+  cursor: pointer;
+}
+
+ul > li.active {
+  background-color: var(--color4);
+}
+
+body .search-container > img,
+body .icon-container > img {
+  filter: invert(0%) sepia(18%) saturate(716%) hue-rotate(1deg) brightness(107%)
+    contrast(84%);
+}
+
+body.dark .search-container > img,
+body.dark .icon-container > img {
+  filter: invert(100%) sepia(1%) saturate(2%) hue-rotate(235deg)
+    brightness(113%) contrast(101%);
+}
+
+@media (max-width: 750px) {
+  .search-filter-container {
+    margin: 30px 0px;
+  }
+}

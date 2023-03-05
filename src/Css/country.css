@@ -1,0 +1,126 @@
+.button-container {
+  background-color: var(--color1);
+  margin: 60px 0;
+  color: var(--color3);
+  padding: 10px;
+  box-shadow: 0px 0px 7px 2px var(--color5);
+  cursor: pointer;
+  max-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 5px;
+}
+
+.button-container > button {
+  border: none;
+  color: var(--color3);
+  background-color: var(--color1);
+}
+
+body .button-container > img {
+  filter: invert(0%) sepia(18%) saturate(716%) hue-rotate(1deg) brightness(107%)
+    contrast(84%);
+}
+
+body.dark .button-container > img {
+  filter: invert(100%) sepia(1%) saturate(2%) hue-rotate(235deg)
+    brightness(113%) contrast(101%);
+}
+
+.image-container {
+  max-width: 500px;
+}
+
+.country-container {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 1fr);
+  align-items: center;
+  column-gap: 80px;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+  margin-bottom: 30px;
+  row-gap: 20px;
+}
+
+.info-container > h1 {
+  grid-column: 1 / -1;
+  color: var(--color3);
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.info-column > p {
+  color: var(--color3);
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.info-column p > :first-child {
+  font-weight: 600;
+}
+
+.border-container {
+  grid-column: 1 / -1;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  row-gap: 10px;
+  max-width: 500px;
+}
+
+.border-container div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.border-container > h1 {
+  color: var(--color3);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.border-container div span {
+  display: inline-block;
+  box-shadow: 0px 0px 7px 2px var(--color5);
+  background-color: var(--color1);
+  color: var(--color3);
+  padding: 6px 18px;
+  border-radius: 5px;
+  margin: 0px;
+}
+
+@media (max-width: 1060px) {
+  .country-container {
+    grid-template-columns: 1.5fr 1fr
+  }
+  .info-container {
+    grid-template-columns: 1fr;
+  }
+  .border-container {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 870px) {
+  .country-container {
+    grid-template-columns: 1fr;
+    place-items: center ;
+    row-gap: 60px;
+  }
+  .image-container {
+    max-width: 600px;
+  }
+  .info-container {
+    margin-left: 10px;
+  }
+}
